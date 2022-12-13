@@ -25,7 +25,7 @@ const options = {
   }
 }
 
-const app = Vue.createApp({})
+const app = createApp({})
 app.use(router)
 app.use(Vue3DirectiveShepherd, options)
 app.mount('#app')
@@ -37,7 +37,8 @@ app.mount('#app')
 | `router` | Instance of VueRouter | Router |
 | `tourMap` | Map of tours. Key is a name of tour. Value is [Tour options](https://shepherdjs.dev/docs/Tour.html) | key:&nbsp;String, value:&nbsp;Shepherd.Tour.TourOptions |
 
-Use directives ```v-tour:[stepNumber]="directiveOptions"```
+
+Use directives ```v-tour-step:[stepNumber]="directiveOptions"```
 
 ```vue
 <template>
@@ -124,7 +125,7 @@ A new ***routerPush*** method has been added to Tour. It can be used when moving
 |key|description|options|
 |:---|---|---|
 | `route` | route location | RouteLocationRaw |
-| `cb` | The function that will be called at the end of the routing | () = void |
+| `cb` | The function that will be called at the end of the routing | () => void |
 
 ## Demo
 

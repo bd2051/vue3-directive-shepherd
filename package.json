@@ -1,19 +1,29 @@
 {
   "name": "vue3-directive-shepherd",
   "version": "1.0.0-beta.0",
-  "description": "",
-  "main": "index.js",
+  "description": "A Vue3 wrapper for the library Shepherd using Vue directives",
   "scripts": {
     "compile": "tsc",
     "clean": "rm -rf dist",
     "prebuild:package": "npm run clean && npm run compile && node dist/setupPackage.js",
     "build:package": "cd dist && npm publish"
   },
+  "main": "index.js",
+  "keywords": [
+    "vue",
+    "shepherd",
+    "site tour",
+    "tour",
+    "directive"
+  ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/"
+    "url": "git+https://github.com/bd2051/vue3-directive-shepherd"
   },
-  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/bd2051/vue3-directive-shepherd/issues"
+  },
+  "homepage": "https://github.com/bd2051/vue3-directive-shepherd#readme",
   "author": "bd2051",
   "license": "MIT",
   "devDependencies": {

@@ -1,6 +1,6 @@
 import tourStep from "./tour-step";
 import { App } from "vue";
-import { Router } from "vue-router";
+import {RouteLocationRaw, Router} from "vue-router";
 import Shepherd from "shepherd.js";
 
 interface tourMap {
@@ -12,12 +12,16 @@ interface Options {
   tourMap: tourMap
 }
 
+export type VueShepherdTour = Shepherd.Tour & {
+  routerPush: (route: RouteLocationRaw, cb: (() => void)) => void
+}
+
 export default {
   install(app: App, options) {
     const { router, tourMap } = options
     Object.entries(tourMap).forEach(([key, options]) => {
       const shepherdTour = new Shepherd.Tour(options);
-      if (typeof router !== 'undefined') {
+      if (typeof router !== "undefined") {
         Object.defineProperty(shepherdTour, "routerPush", {
           enumerable: false,
           configurable: false,
@@ -27,7 +31,7 @@ export default {
           },
         });
       }
-      app.config.globalProperties[key] = shepherdTour;
+      app.config.globalProperties[key] = shepherdTour as VueShepherdTour;
     })
     app.directive("tour-step", tourStep);
   },

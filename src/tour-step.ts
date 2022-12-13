@@ -1,17 +1,23 @@
 const tourStep = {
   created(el, binding) {
-    const step = binding.arg;
+    const stepNumber = binding.arg;
     const { tour, options } = binding.value;
-    if (!tour.getById(step)) {
-      if (!options.attachTo) {
-        options.attachTo = {};
-      }
-      options.attachTo.element = el;
+    const step = tour.getById(stepNumber)
+    if (!options.attachTo) {
+      options.attachTo = {};
+    }
+    options.attachTo.element = el;
+    if (!step) {
       tour.addStep({
-        id: step,
+        id: stepNumber,
         ...options,
       });
       tour.steps.sort((a, b) => a.id - b.id);
+    } else {
+      step.updateStepOptions({
+        id: stepNumber,
+        ...options,
+      })
     }
   },
 };

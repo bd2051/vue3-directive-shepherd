@@ -38,7 +38,7 @@ app.mount('#app')
 | `tourMap` | Map of tours. Key is a name of tour. Value is [Tour options](https://shepherdjs.dev/docs/Tour.html) | key:&nbsp;String, value:&nbsp;Shepherd.Tour.TourOptions |
 
 
-Use directives ```v-tour-step:[stepNumber]="directiveOptions"```
+Use directive ```v-tour-step:[stepNumber]="directiveOptions"```
 
 ```vue
 <template>
@@ -98,6 +98,23 @@ Use directives ```v-tour-step:[stepNumber]="directiveOptions"```
 | `options` | [Step options](https://shepherdjs.dev/docs/Step.html) | Step.StepOptions |
 
 **Note:** In options attachTo.element is not required as it is filled in inside the directive
+
+### Composition API
+```vue
+<script>
+  import { defineComponent, inject, onMounted } from 'vue'
+
+  export default defineComponent({
+    setup() {
+      const tour = inject('myCustomTour');
+      onMounted(() => {
+        tour.start();
+      });
+      return { tour };
+    }
+  });
+</script>
+```
 
 ## routerPush
 A new ***routerPush*** method has been added to Tour. It can be used when moving between routes

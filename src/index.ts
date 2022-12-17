@@ -32,6 +32,7 @@ export default {
         });
       }
       app.config.globalProperties[key] = shepherdTour as VueShepherdTour;
+      app.provide(key, shepherdTour as VueShepherdTour)
     })
     app.directive("tour-step", tourStep);
   },

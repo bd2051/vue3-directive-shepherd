@@ -1,6 +1,6 @@
 {
   "name": "vue3-directive-shepherd",
-  "version": "1.0.0-beta.3",
+  "version": "1.0.1",
   "description": "A Vue3 wrapper for the library Shepherd using Vue directives",
   "scripts": {
     "compile": "tsc",
@@ -11,10 +11,13 @@
   "main": "index.js",
   "keywords": [
     "vue",
+    "vue3",
     "shepherd",
     "site tour",
     "tour",
-    "directive"
+    "directive",
+    "quasar",
+    "tsx"
   ],
   "repository": {
     "type": "git",

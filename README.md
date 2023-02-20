@@ -146,4 +146,8 @@ A new ***routerPush*** method has been added to Tour. It can be used when moving
 
 ## Demo
 
-[Codesanbox example](https://codesandbox.io/s/focused-hofstadter-v6uicy)
+[Codesanbox example](https://codesandbox.io/s/vue3-directive-shepherd-v6uicy)
+
+## Demo Quasar with TSX
+
+[Codesanbox example](https://codesandbox.io/s/shepherd-quasar-tsx-g6u0ju)

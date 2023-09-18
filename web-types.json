@@ -1,8 +1,8 @@
 {
     "$schema": "https://raw.githubusercontent.com/JetBrains/web-types/master/v2-preview/web-types.json",
-    "name": "my-project",
+    "name": "vue3-directive-shepherd",
     "framework": "vue",
-    "version": "1.0.0",
+    "version": "1.0.2",
     "contributions": {
         "html": {
             "vue-directives": [

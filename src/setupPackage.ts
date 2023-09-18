@@ -24,6 +24,7 @@ function main() {
   );
   fs.copyFileSync(__dirname + "/../LICENSE", __dirname + "/LICENSE");
   fs.copyFileSync(__dirname + "/../README.md", __dirname + "/README.md");
+  fs.copyFileSync(__dirname + "/../web-types.json", __dirname + "/web-types.json");
   fs.copyFileSync(__dirname + "/../.npmignore", __dirname + "/.npmignore");
 }
 

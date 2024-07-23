@@ -10,10 +10,8 @@
     "sourceMap": false,
     "outDir": "dist",
     "baseUrl": ".",
-    "paths": {
-      "*": ["node_modules/*", "src/types/*"]
-    },
-    "declaration": true
+    "declaration": true,
+    "skipLibCheck": true
   },
-  "include": ["src/**/*"]
+  "include": ["src/**/*"],
 }

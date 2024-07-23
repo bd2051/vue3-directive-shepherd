@@ -15,8 +15,8 @@ const tourStep = {
       tour.steps.sort((a, b) => a.id - b.id);
     } else {
       step.updateStepOptions({
-        id: stepNumber,
         ...options,
+        id: stepNumber,
       })
     }
   },

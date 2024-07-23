@@ -1,6 +1,6 @@
 {
   "name": "vue3-directive-shepherd",
-  "version": "1.0.2",
+  "version": "2.0.0-beta.0",
   "description": "A Vue3 wrapper for the library Shepherd using Vue directives",
   "scripts": {
     "compile": "tsc",
@@ -38,7 +38,7 @@
     "@babel/types": "^7.20.5"
   },
   "dependencies": {
-    "shepherd.js": "^11.0.1"
+    "shepherd.js": "^13.0.1"
   },
   "web-types": "./web-types.json"
 }

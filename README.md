@@ -143,11 +143,3 @@ A new ***routerPush*** method has been added to Tour. It can be used when moving
 |:---|---|---|
 | `route` | route location | RouteLocationRaw |
 | `cb` | The function that will be called at the end of the routing | () => void |
-
-## Demo
-
-[Codesanbox example](https://codesandbox.io/s/vue3-directive-shepherd-v6uicy)
-
-## Demo Quasar with TSX
-
-[Codesanbox example](https://codesandbox.io/s/shepherd-quasar-tsx-g6u0ju)

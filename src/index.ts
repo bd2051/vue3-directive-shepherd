@@ -1,7 +1,7 @@
 import tourStep from "./tour-step";
 import { App } from "vue";
 import { RouteLocationRaw, Router } from "vue-router";
-import { Tour, TourOptions } from "shepherd.js";
+import Shepherd, { Tour, TourOptions} from "shepherd.js";
 
 interface tourMap {
   [key: string]: TourOptions
@@ -20,7 +20,7 @@ export default {
   install(app: App, options) {
     const { router, tourMap } = options
     Object.entries(tourMap).forEach(([key, options]) => {
-      const shepherdTour = new Tour(options);
+      const shepherdTour = new Shepherd.Tour(options);
       if (typeof router !== "undefined") {
         Object.defineProperty(shepherdTour, "routerPush", {
           enumerable: false,
